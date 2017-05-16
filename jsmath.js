@@ -1,44 +1,41 @@
-var a = size;
-var b = freechlor;
-var c = phval;
-var d = alk;
-var e = calcium;
-var f = algae;
-var adjustments;
+document.getElementsByName("calc").onclick = calcuLater;
 
-function calculateChlor(a, b) {
-if b < 4 {                  //3-4ppm ideally
-var add = a / 400 * .51 + ' oz per 1ppm needed.';
-} else {
-var add = a / 400 * .17 + ' oz per desired decrease in ppm.';
+function calcuLater() {
+  var size = document.getElementsByName("size");
+  var freechlor = document.getElementsByName("freechlor");
+  var phval = document.getElementsByName("phval");
+  var alk = document.getElementsByName("alk");
+  var calcium = document.getElementsByName("calc");
+    for (i = 0, i < 4; i++){
+        if (i = 0) {
+            if (b < 5) {                  //3-4ppm ideally
+                freechlor = (size / 400 * .51).toString() + ' oz per 1ppm needed.';
+            } else if (b > 10) {
+                freechlor = (size / 400 * .17).toString() + ' oz per desired decrease in ppm.';
+            }
+            return freechlor;
+        } else if (i = 1){
+            if (c < 7.2) {                //7.2-7.6 ideally
+                phval = (size / 400 * .21).toString() + ' oz Soda Ash per drop base demand needed.';
+            } else if (c > 7.7) {
+                phval = (size / 400 * .37).toString() + ' oz Muriatic per drop acid demand needed.';
+            }
+            return phval;
+        } else if (i = 2) {
+            if d < 80 {                //pools:80-120 ideally
+                alk = (size / 400 * .9).toString() + ' oz Baking Soda per 10ppm increase needed.';
+            } else if d > 120 {
+                alk = (size / 400 * 1.02).toString() + ' oz Muriatic per 20ppm decrease needed.';
+            }
+            return alk;
+        } else if (i = 3) {
+            if e < 180 {               //pools:200-400, spas 250-350 spas, ideally
+                calcium = (size / 400 * .9 +).toString() + ' oz Baking Soda per 10ppm increase needed.';
+            } else if d > 350 {
+                calcium = (size / 400 * 1.02).toString() + ' oz Muriatic per 20ppm decrease needed.';
+            }
+            return calcium;
+        }
+    } var adjustments = freechlor + phval + alk + calcium;
+      document.getElementById("adjustments").innerHTML = adjustments;
 }
-return add;
-}
-
-function calculatepH(a, b) {
-if c < 7.2 {                //7.2-7.6 ideally
-var add = a / 400 * .21 + ' oz Soda Ash per drop base demand needed.';
-} else if c > 7.7 {
-var add = a / 400 * .37 + ' oz Muriatic per drop acid demand needed.';
-}
-return add;
-}
-
-function calculateAlk(a, b) {
-if d < 80 {                //pools:80-120 ideally
-var add = a / 400 * .9 + ' oz Baking Soda per 10ppm increase needed.';
-} else if d > 120 {
-var add = a / 400 * 1.02 + ' oz Muriatic per 20ppm decrease needed.';
-}
-return add;
-}
-
-function calculateCalcium(a, b) {
-if e < 80 {               //pools:200-400, spas 150-250 spas, ideally
-var add = a / 400 * .9 + ' oz Baking Soda per 10ppm increase needed.';
-} else if d > 120 {
-var add = a / 400 * 1.02 + ' oz Muriatic per 20ppm decrease needed.';
-}
-return add;
-}
-adjustments = function calculateChlor() + function calculatepH() + function calculateAlk() + function calculateCalcium();

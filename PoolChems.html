@@ -3,26 +3,23 @@
     <head>
         <link rel="stylesheet" type="text/css" href="mystyle.css">
     </head>
-<form action="/jsmath.js">
-<fieldset>
-    <h2>Waterbody Type:</h2>
-  <input type="radio" name="bodytype" id="pool" value="Pool" checked> Pool<br>
-  <input type="radio" name="bodytype" id="spa" value="Spa"> Spa<br>
-  <input type="radio" name="bodytype" id="other" value="other"> Other<br>
-</fieldset>
-<fieldset>
-    <h3>Pool Chems</h3>
-  Approx. Size:<br>
-  <input type="number" name="size" value="Gallons" step="100"><br>
-  Free Chlorine:<br>
-  <input type="number" name="freechlor" value="Free Chlorine" step=".5"><br>
-  pH:<br>
-  <input type="number" name="phval" value="pH" step=".1"><br>
-  Alkalinity:<br>
-  <input type="number" name="alk" value="Alkalinity" step="10"><br>
-  Calcium:<br>
-  <input type="number" name="calcium" value="Calcium" step="10"><br><br>
-  <input type="button" onclick="document.getElementById('adjustments').innerHTML = "value="Calculate">
-  </fieldset>
-</form>
-<p id='adjustments'></p>
+    <form action="/jsmath.js">
+    <body>
+        <fieldset>
+            <h3>Pool Chems</h3>
+            Approx. Size:<br>
+            <input type="number" name="size" value="Gallons" step="100"><br>
+            Free Chlorine:<br>
+            <input type="number" name="freechlor" value="Free Chlorine" step=".5"><br>
+             pH:<br>
+            <input type="number" name="phval" value="pH" step=".1"><br>
+            Alkalinity:<br>
+            <input type="number" name="alk" value="Alkalinity" step="10"><br>
+            Calcium:<br>
+            <input type="number" name="calcium" value="Calcium" step="10"><br><br>
+            <button id="calc">Calculate!</button>
+        </fieldset>
+    </form>
+    <p id="adjustments"></p>
+    </body>
+</html>
