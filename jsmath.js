@@ -1,6 +1,6 @@
 function calcuLater(form) {
 
-  var size = document.getElementById("size").value;
+  var size = document.getElementById("size");
   var b = document.getElementById("freechlor").value;
   var c = document.getElementById("phval").value;
   var d = document.getElementById("alk").value;
