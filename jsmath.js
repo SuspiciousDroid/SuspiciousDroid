@@ -1,10 +1,10 @@
 function calcuLater(form) {
 
   var size = document.getElementById("size");
-  var b = document.getElementById("freechlor").value;
-  var c = document.getElementById("phval").value;
-  var d = document.getElementById("alk").value;
-  var e = document.getElementById("calc").value;
+  var b = document.getElementById("freechlor");
+  var c = document.getElementById("phval");
+  var d = document.getElementById("alk");
+  var e = document.getElementById("calc");
   var adjustments = '';
   var i;
 
