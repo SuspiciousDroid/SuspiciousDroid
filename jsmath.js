@@ -6,7 +6,7 @@ function calcuLater(form) {
   var d = document.getElementById("alk").value;
   var e = document.getElementById("calc").value;
   var adjustments = '';
-  var i;
+  var i; 
 
   for (i = 0; i < 4; i++) {
     if (i = 0) {
