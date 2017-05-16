@@ -2,10 +2,11 @@ document.getElementsByName("calc").onclick = calcuLater;
 
 function calcuLater() {
   var size = document.getElementsByName("size");
-  var freechlor = document.getElementsByName("freechlor");
-  var phval = document.getElementsByName("phval");
-  var alk = document.getElementsByName("alk");
-  var calcium = document.getElementsByName("calc");
+  var b = document.getElementsByName("freechlor");
+  var c = document.getElementsByName("phval");
+  var d = document.getElementsByName("alk");
+  var e = document.getElementsByName("calc");
+  var freechlor, phval, alk, calcium;
     for (i = 0, i < 4; i++){
         if (i = 0) {
             if (b < 5) {                  //3-4ppm ideally
@@ -29,7 +30,7 @@ function calcuLater() {
             }
             return alk;
         } else if (i = 3) {
-            if e < 180 {               //pools:200-400, spas 250-350 spas, ideally
+            if (e < 180) {               //pools:200-400, spas 250-350 spas, ideally
                 calcium = (size / 400 * .9 +).toString() + ' oz Baking Soda per 10ppm increase needed.';
             } else if d > 350 {
                 calcium = (size / 400 * 1.02).toString() + ' oz Muriatic per 20ppm decrease needed.';
