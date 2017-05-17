@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script src="jsmath.js"></script>
+        <script src="/suspiciousdroid/jsmath.js"></script>
         <link rel="stylesheet" type="text/css" href="mystyle.css">
     </head>
     <body>
         <fieldset>
+            <form action="suspiciousdroid/jsmath.js id="form1" method="post">
             <h3>Pool Chems</h3> 
             Approx. Size:<br>
-            <input type="number" name="size" step="100"><br>
+            <input type="number" name="size" min="0" step="100"><br>
             Free Chlorine:<br>
-            <input type="number" name="freechlor" step=".5"><br>
+            <input type="number" name="freechlor" min="0" step=".5"><br>
              pH:<br>
-            <input type="number" name="phval" step=".1"><br>
+            <input type="number" name="phval" min="0" step=".1"><br>
             Alkalinity:<br>
-            <input type="number" name="alk" step="10"><br>
+            <input type="number" name="alk" min="0" step="10"><br>
             Calcium:<br>
-            <input type="number" name="calcium" step="10"><br><br>
+            <input type="number" name="calcium" min="0" step="10"><br><br>
             <input type="button" value="Calculate" onClick="calcuLater(this)">
+            </form>
         </fieldset>
-    <p id="adjust" name="answer"></p>
+    <p id="adjust"></p>
   </body>
 </html>
