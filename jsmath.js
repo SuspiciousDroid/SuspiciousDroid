@@ -1,4 +1,4 @@
-function calcuLater(form) {
+function calcuLater() {
 
   var a = document.getElementById("size");
   var b = document.getElementById("freechlor");
